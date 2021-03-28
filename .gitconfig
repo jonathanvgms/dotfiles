@@ -1,0 +1,26 @@
+[user]
+	email = jonathanvgms@gmail.com
+	name = jvelazquez
+[merge]
+    tool = winmerge
+[mergetool "winmerge"]
+    cmd = "'C:/Program Files (x86)/WinMerge/WinMergeU.exe'" -e "$MERGED"
+[diff]
+    tool = winmerge
+[difftool "winmerge"]
+    cmd = "'C:/Program Files (x86)/WinMerge/WinMergeU.exe'" -e "$LOCAL" "$REMOTE"
+[credential]
+    helper = manager
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	editor = \"C:/Program Files (x86)/GitExtensions/GitExtensions.exe\" fileeditor
+[pull]
+	rebase = false
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
