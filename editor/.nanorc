@@ -3,3 +3,5 @@ set autoindent
 set mouse
 
 set linenumbers
+
+set tabsize 4
