@@ -1,11 +1,9 @@
 name: Deploy Website
 
 on:
-  workflow_run:
-    workflows:
-      - Build
-    types:
-      - completed
+  push:
+    branches:
+      - main
 
 jobs:
   tag-image:
