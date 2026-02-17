@@ -1,43 +1,180 @@
+# ══════════════════════════════════════════════════════════════
+# Alacritty - Configuración Super Pro 🚀
+# ══════════════════════════════════════════════════════════════
+
 [general]
 live_config_reload = true
-working_directory = 'C:\Users\Jonathan\Desktop'
+working_directory = 'C:\Users\Jonathan'
 
-[cursor]
-blink_interval = 750
-thickness = 0.15
+[env]
+TERM = "xterm-256color"
 
-[cursor.style]
-blinking = "On"
-shape = "Beam"
-
+# ══════════════════════════════════════════════════════════════
+# FUENTE - JetBrains Mono con ligaduras
+# ══════════════════════════════════════════════════════════════
 [font]
-size = 10.0
+size = 9.0
+
+[font.normal]
+family = "SF Mono"
+style = "Regular"
 
 [font.bold]
+family = "SF Mono"
 style = "Bold"
 
 [font.italic]
+family = "SF Mono"
 style = "Italic"
 
-[font.normal]
-family = "Monaco"
-style = "Regular"
+[font.bold_italic]
+family = "SF Mono"
+style = "Bold Italic"
 
-[scrolling]
-history = 10000
-multiplier = 3
+[font.offset]
+x = 0
+y = 1
 
-[terminal.shell]
-program = 'C:\Program Files\Git\bin\bash'
-
+# ══════════════════════════════════════════════════════════════
+# VENTANA - Configuración moderna
+# ══════════════════════════════════════════════════════════════
 [window]
-decorations = "full"
-opacity = 0.95
+decorations = "Full"
+opacity = 0.92
+blur = true
 startup_mode = "Windowed"
+dynamic_title = true
+decorations_theme_variant = "Dark"
 
 [window.dimensions]
-columns = 120
+columns = 140
 lines = 40
 
 [window.padding]
-x = 5
+x = 1
+y = 1
+
+# ══════════════════════════════════════════════════════════════
+# SCROLLING
+# ══════════════════════════════════════════════════════════════
+[scrolling]
+history = 100000
+multiplier = 3
+
+# ══════════════════════════════════════════════════════════════
+# CURSOR - Estilo elegante
+# ══════════════════════════════════════════════════════════════
+[cursor]
+blink_interval = 550
+blink_timeout = 0
+thickness = 0.15
+unfocused_hollow = true
+
+[cursor.style]
+shape = "Block"
+blinking = "On"
+
+# ══════════════════════════════════════════════════════════════
+# TERMINAL
+# ══════════════════════════════════════════════════════════════
+[terminal.shell]
+program = 'C:\Program Files\Git\bin\bash'
+
+# ══════════════════════════════════════════════════════════════
+# TEMA - Dark Pastels 🎨
+# ══════════════════════════════════════════════════════════════
+[colors.primary]
+background = "#1c1c1c"
+foreground = "#dcdcdc"
+
+[colors.normal]
+black   = "#000000"
+red     = "#ff5f87"
+green   = "#87d787"
+yellow  = "#ffaf5f"
+blue    = "#5fafd7"
+magenta = "#d787d7"
+cyan    = "#5fd7d7"
+white   = "#dcdcdc"
+
+[colors.bright]
+black   = "#767676"
+red     = "#ff87af"
+green   = "#afd7af"
+yellow  = "#ffd787"
+blue    = "#87afd7"
+magenta = "#d7afd7"
+cyan    = "#87d7d7"
+white   = "#ffffff"
+
+[colors.cursor]
+text = "#1c1c1c"
+cursor = "#dcdcdc"
+
+[colors.selection]
+text = "CellForeground"
+background = "#3a3a3a"
+
+[colors.vi_mode_cursor]
+text = "#1c1c1c"
+cursor = "#dcdcdc"
+
+# ══════════════════════════════════════════════════════════════
+# ATAJOS DE TECLADO - Super útiles
+# ══════════════════════════════════════════════════════════════
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Control|Shift"
+action = "CreateNewWindow"
+
+[[keyboard.bindings]]
+key = "Plus"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Control"
+action = "ResetFontSize"
+
+[[keyboard.bindings]]
+key = "F11"
+action = "ToggleFullscreen"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Control"
+chars = "\f"
+
+# ══════════════════════════════════════════════════════════════
+# MOUSE
+# ══════════════════════════════════════════════════════════════
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Right"
+action = "Paste"
+
+# ══════════════════════════════════════════════════════════════
+# BELL - Notificaciones visuales
+# ══════════════════════════════════════════════════════════════
+[bell]
+animation = "EaseOutExpo"
+duration = 100
+color = "#5fafd7"
