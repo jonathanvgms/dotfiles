@@ -1,7 +1,31 @@
-set autoindent
+# ── Interfaz ──────────────────────────────────────────────────
+set linenumbers          # Números de línea siempre visibles
+set mouse                # Soporte de mouse (click para posicionar cursor)
+set constantshow         # Mostrar posición del cursor en la barra inferior
+set stateflags           # Indicadores de estado (modificado, auto-indent, etc.)
+set minibar              # Barra de estado minimalista con nombre de archivo
+set nohelp               # Ocultar las 2 líneas de ayuda (más espacio; ^G las muestra)
 
-set mouse
+# ── Edición ───────────────────────────────────────────────────
+set autoindent           # Mantener indentación de la línea anterior
+set tabsize 4            # Tabulación = 4 espacios
+set tabstospaces         # Convertir tabs a espacios (estándar en la mayoría de proyectos)
+set trimblanks           # Eliminar espacios al final de línea al guardar
+set afterends            # Ctrl+Derecha salta al final de palabra (no al inicio de la siguiente)
+set atblanks             # Cortar líneas largas en espacios, no en medio de palabra
+set zap                  # Backspace/Delete borran región seleccionada
+set matchbrackets "(<[{)>]}"  # Resaltar paréntesis/corchetes correspondientes
 
-set linenumbers
+# ── Archivos & Historial ─────────────────────────────────────
+set historylog           # Recordar historial de búsquedas entre sesiones
+set positionlog          # Recordar posición del cursor al reabrir archivos
+set backup               # Crear archivos de respaldo (~) al guardar
+set locking              # Crear archivos .lock para evitar edición concurrente
+set multibuffer          # Abrir múltiples archivos en buffers (Ctrl+← / Ctrl+→)
 
-set tabsize 4
+# ── Syntax Highlighting — todos los lenguajes disponibles ────
+include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano/extra/*.nanorc"
+
+bind ^Z undo main
+bind ^Y redo main

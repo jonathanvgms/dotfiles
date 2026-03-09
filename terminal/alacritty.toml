@@ -4,7 +4,6 @@
 
 [general]
 live_config_reload = true
-working_directory = 'C:\Users\Jonathan'
 
 [env]
 TERM = "xterm-256color"
@@ -13,7 +12,7 @@ TERM = "xterm-256color"
 # FUENTE - JetBrains Mono con ligaduras
 # ══════════════════════════════════════════════════════════════
 [font]
-size = 9.0
+size = 10
 
 [font.normal]
 family = "SF Mono"
@@ -41,7 +40,7 @@ y = 1
 [window]
 decorations = "Full"
 opacity = 0.92
-blur = true
+blur = false
 startup_mode = "Windowed"
 dynamic_title = true
 decorations_theme_variant = "Dark"
@@ -77,8 +76,8 @@ blinking = "On"
 # ══════════════════════════════════════════════════════════════
 # TERMINAL
 # ══════════════════════════════════════════════════════════════
-[terminal.shell]
-program = 'C:\Program Files\Git\bin\bash'
+#[terminal.shell]
+#program = '/bin/zsh'
 
 # ══════════════════════════════════════════════════════════════
 # TEMA - Dark Pastels 🎨
@@ -176,5 +175,5 @@ action = "Paste"
 # ══════════════════════════════════════════════════════════════
 [bell]
 animation = "EaseOutExpo"
-duration = 100
+duration = 0
 color = "#5fafd7"
